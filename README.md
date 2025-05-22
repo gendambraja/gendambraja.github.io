@@ -1,35 +1,44 @@
+# vCard - Personal portfolio
 
-<html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>ASUUUUU</title>
+![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
+[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-	</head>
-	<body>
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Product</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Other</a>
-				</li>
-			</ul>
-		<h1>Hello, world!</h1>
+vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
+## Demo
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script></body>
-</html>
+![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
+![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+
+## Installing vCard
+
+To install **vCard**, follow these steps:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+```
+
+## Contact
+
+If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+
+## License
+
+MIT
