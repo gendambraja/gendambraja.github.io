@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV Taaruf – Gendam Braja Wibowo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-main: #070708;
+      --bg-card: #111217;
+      --accent: #f7e9a3; /* pale yellow */
+      --accent-soft: rgba(247, 233, 163, 0.08);
+      --text-main: #f5f5f5;
+      --text-muted: #b0b0b0;
+      --border-soft: rgba(247, 233, 163, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top left, #1b1b25 0, #050507 55%);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .cv-wrapper {
+      max-width: 980px;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(247, 233, 163, 0.08), transparent);
+      border-radius: 24px;
+      padding: 2px; /* border illusion */
+    }
+
+    .cv-inner {
+      background: var(--bg-card);
+      border-radius: 22px;
+      padding: 28px 26px 30px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.6fr;
+      gap: 28px;
+    }
+
+    /* Left Column */
+    .cv-left {
+      border-right: 1px solid var(--border-soft);
+      padding-right: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .header-block {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .photo-wrapper {
+      width: 150px;
+      height: 150px;
+      border-radius: 999px;
+      border: 2px solid var(--accent);
+      padding: 3px;
+      overflow: hidden;
+      background: radial-gradient(circle at 30% 0, #f7e9a3 0, #2a2420 43%, #111217 75%);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      display: block;
+    }
+
+    .name-block h1 {
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .name-block h1 span {
+      color: var(--accent);
+    }
+
+    .name-block .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-top: 2px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border-soft);
+      color: var(--accent);
+      margin-top: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background-color: var(--accent);
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .section-block {
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    .section-block p,
+    .section-block li {
+      line-height: 1.6;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .info-item {
+      margin-bottom: 6px;
+    }
+
+    .info-label {
+      font-weight: 500;
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .info-value {
+      font-size: 0.86rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(255, 255, 255, 0.01);
+      color: var(--text-muted);
+    }
+
+    /* Right Column */
+    .cv-right {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .section-card {
+      background: rgba(0, 0, 0, 0.19);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 14px 16px 14px;
+    }
+
+    .section-card + .section-card {
+      margin-top: 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .section-header .section-title {
+      margin-bottom: 0;
+    }
+
+    .section-header span.tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .timeline-list {
+      list-style: none;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+      font-size: 0.86rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background-color: var(--accent);
+    }
+
+    .timeline-role {
+      font-weight: 500;
+    }
+
+    .timeline-place {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 12px;
+    }
+
+    .list-dash {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .list-dash li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 4px;
+      font-size: 0.86rem;
+    }
+
+    .list-dash li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .mini-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    .cv-footer {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: right;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 840px) {
+      .cv-inner {
+        grid-template-columns: 1fr;
+        padding: 22px 18px 22px;
+      }
+
+      .cv-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border-soft);
+        padding-right: 0;
+        padding-bottom: 16px;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-wrapper {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-wrapper">
+    <div class="cv-inner">
+      <!-- LEFT COLUMN -->
+      <aside class="cv-left">
+        <div class="header-block">
+          <div class="photo-wrapper">
+            <!-- Ganti src dengan foto asli -->
+            <img src="https://gendambraja.github.io/assets/images/my-avatar.png?text=Mas+Ge" alt="Foto Gendam Braja Wibowo" />
+          </div>
+          <div class="name-block">
+            <h1><span>Gendam</span> Braja Wibowo</h1>
+            <div class="subtitle">Mas Ge · CV Taaruf</div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Siap Menikah, InsyaAllah
+            </div>
+          </div>
+        </div>
+
+        <!-- Identitas Diri -->
+        <div class="section-block">
+          <div class="section-title">Identitas Diri</div>
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-label">Nama Lengkap</div>
+              <div class="info-value">Gendam Braja Wibowo</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Nama Panggilan</div>
+              <div class="info-value">Mas Ge</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Tanggal Lahir</div>
+              <div class="info-value">11 Juli 1996 (29 tahun)</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Status</div>
+              <div class="info-value">Lajang</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Domisili</div>
+              <div class="info-value">Solo – Sukoharjo</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Pendidikan</div>
+              <div class="info-value">STMIK Sinar Nusantara</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Kontak</div>
+              <div class="info-value">082147753853</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Latar Belakang Keluarga -->
+        <div class="section-block">
+          <div class="section-title">Latar Belakang Keluarga</div>
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-label">Ayah</div>
+              <div class="info-value">Didiek Wibowo (wiraswasta)</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Ibu</div>
+              <div class="info-value">Alm. Marsini</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Anak ke</div>
+              <div class="info-value">2 dari 3 bersaudara</div>
+            </li>
+            <li class="info-item">
+              <div class="info-label">Saudara</div>
+              <div class="info-value">Kakak perempuan & adik perempuan</div>
+            </li>
+          </ul>
+          <p class="mini-note">Kondisi keluarga rukun, saling mendukung, dan komunikasi baik.</p>
+        </div>
+
+        <!-- Kebiasaan & Lifestyle -->
+        <div class="section-block">
+          <div class="section-title">Kebiasaan & Lifestyle</div>
+          <ul class="list-dash">
+            <li>Sudah tidak merokok.</li>
+            <li>Olahraga: renang, sepeda, tracking, hiking.</li>
+            <li>Lebih suka menyimak video edukatif daripada membaca.</li>
+            <li>Suka belajar teknologi & ilmu yang menenangkan hati.</li>
+            <li>Hidup sederhana & fokus pada hal esensial.</li>
+            <li>Tidak terlalu rapi, namun bertanggung jawab pada hal penting.</li>
+          </ul>
+        </div>
+
+        <!-- Hobi & Minat -->
+        <div class="section-block">
+          <div class="section-title">Hobi & Minat</div>
+          <div class="pill-list">
+            <div class="pill">Desain grafis</div>
+            <div class="pill">3D modeling</div>
+            <div class="pill">Fotografi produk</div>
+            <div class="pill">Editing video</div>
+            <div class="pill">Video edukatif & teknologi</div>
+            <div class="pill">Renang</div>
+            <div class="pill">Sepeda</div>
+            <div class="pill">Tracking & hiking</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="cv-right">
+        <!-- Pekerjaan & Karier -->
+        <section class="section-card">
+          <div class="section-header">
+            <div class="section-title">Pekerjaan & Karier</div>
+            <span class="tag">Manager · Kreatif & Operasional</span>
+          </div>
+          <p class="text-muted" style="font-size: 0.86rem; margin-bottom: 6px;">
+            Saat ini bekerja sebagai:
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 8px;">
+            <strong>Manager – Monesia Apothecary</strong><br />
+            <span class="text-muted">PT. Nesia Digital Group / Nesia Digital Pharma</span>
+          </p>
+          <div class="two-column">
+            <div>
+              <div class="info-label" style="margin-bottom: 2px;">Bidang Kerja</div>
+              <ul class="list-dash">
+                <li>Manajemen tim (creative, admin, warehouse, live streaming).</li>
+                <li>Desain grafis & visual brand.</li>
+                <li>Video editing & produksi konten.</li>
+                <li>3D modeling (Blender).</li>
+                <li>Digital marketing & content planning.</li>
+                <li>Koordinasi produksi & operasional harian.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="info-label" style="margin-bottom: 2px;">Pengalaman Sebelumnya</div>
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <div class="timeline-role">Desainer/Layout</div>
+                  <div class="timeline-place">Batik Gunawan</div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-role">Desainer Packaging</div>
+                  <div class="timeline-place">Percetakan Kurnia Satya</div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-role">Setting & Desain Buku</div>
+                  <div class="timeline-place">Penerbit Dipo Mulyo</div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-role">Mentor & RnD</div>
+                  <div class="timeline-place">Sekolahdesain.id</div>
+                </li>
+                <li class="timeline-item">
+                  <div class="timeline-role">Freelance Desain & Pengajar</div>
+                  <div class="timeline-place">Sejak 2018</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kepribadian & Karakter -->
+        <section class="section-card">
+          <div class="section-header">
+            <div class="section-title">Kepribadian & Karakter</div>
+            <span class="tag">Personal</span>
+          </div>
+          <div class="two-column">
+            <div>
+              <ul class="list-dash">
+                <li>Reflektif & suka obrolan yang penuh makna.</li>
+                <li>Perhatian & peka terhadap perasaan orang lain.</li>
+                <li>Bertanggung jawab & berusaha bersikap dewasa.</li>
+                <li>Tenang, tidak meledak-ledak.</li>
+                <li>Komunikatif, menyukai transparansi.</li>
+                <li>Memimpin dengan cara lembut.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="info-label" style="margin-bottom: 4px;">Attachment & Gaya Komunikasi</div>
+              <ul class="list-dash">
+                <li>Attachment sedikit anxious saat sudah dekat, namun disadari & terus diperbaiki.</li>
+                <li>Jujur dan to the point, tetap menjaga adab.</li>
+                <li>Mengutamakan penyelesaian masalah dengan tenang.</li>
+                <li>Menghindari drama & fokus pada solusi.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Visi Pernikahan -->
+        <section class="section-card">
+          <div class="section-header">
+            <div class="section-title">Visi Pernikahan</div>
+            <span class="tag">Rumah Tangga</span>
+          </div>
+          <ul class="list-dash">
+            <li>Membangun rumah tangga yang saling menenangkan & nyaman.</li>
+            <li>Mengedepankan komunikasi yang jujur dan penuh pengertian.</li>
+            <li>Ingin menjadi suami yang hadir secara emosional, bukan hanya finansial.</li>
+            <li>Menjaga adab, kepercayaan, dan transparansi dalam hubungan.</li>
+            <li>Menginginkan hubungan yang tumbuh perlahan, stabil, dan penuh ketenangan.</li>
+          </ul>
+        </section>
+
+        <!-- Kriteria Pasangan -->
+        <section class="section-card">
+          <div class="section-header">
+            <div class="section-title">Kriteria Pasangan</div>
+            <span class="tag">Harapan Pasangan</span>
+          </div>
+          <ul class="list-dash">
+            <li>Lembut, penyayang, dan sabar.</li>
+            <li>Memiliki komunikasi yang jujur.</li>
+            <li>Tidak menyembunyikan masalah & mau berdiskusi.</li>
+            <li>Mau tumbuh bersama & memahami karakter masing-masing.</li>
+            <li>Menghargai proses & realita kehidupan yang sederhana.</li>
+          </ul>
+        </section>
+
+        <!-- Kesehatan & Hal yang Diperbaiki -->
+        <section class="section-card">
+          <div class="section-header">
+            <div class="section-title">Kesehatan & Pengembangan Diri</div>
+            <span class="tag">Personal Growth</span>
+          </div>
+          <div class="two-column">
+            <div>
+              <div class="info-label" style="margin-bottom: 4px;">Kesehatan</div>
+              <ul class="list-dash">
+                <li>Alhamdulillah dalam kondisi sehat.</li>
+                <li>Tidak memiliki riwayat penyakit berat.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="info-label" style="margin-bottom: 4px;">Hal-hal yang Sedang Diperbaiki</div>
+              <ul class="list-dash">
+                <li>Menstabilkan emosi.</li>
+                <li>Mengurangi anxious attachment.</li>
+                <li>Menata pola tidur.</li>
+                <li>Menyeimbangkan kerja & personal life.</li>
+                <li>Belajar lebih steady & konsisten dalam hubungan.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="cv-footer">
+          Disusun oleh: Gendam Braja Wibowo · Untuk keperluan taaruf ·
+          <span style="color: var(--accent);">InsyaAllah terbuka untuk diskusi & klarifikasi.</span>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
